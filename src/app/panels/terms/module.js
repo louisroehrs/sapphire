@@ -298,6 +298,18 @@ function (angular, app, _, $, kbn) {
       dashboard.refresh();
     };
 
+    $scope.reset_query = function (state) {
+        var ids=  filterSrv.idsByTypeAndField('terms',$scope.panel.field);
+        if (ids.length > 0) {
+            filterSrv.remove(ids[0]);
+        }
+        ids= filterSrv.idsByTypeAndField('exists',$scope.panel.field);
+        if (ids.length > 0) {
+            filterSrv.remove(ids[0]);
+        }
+        dashboard.refresh();
+    };
+
     $scope.set_refresh = function (state) {
       $scope.refresh = state;
       // if 'count' mode is selected, set decimal_points to zero automatically.
@@ -305,6 +317,7 @@ function (angular, app, _, $, kbn) {
         $scope.panel.decimal_points = 0;
       }
     };
+
 
     $scope.close_edit = function() {
       if($scope.refresh) {
@@ -488,6 +501,7 @@ function (angular, app, _, $, kbn) {
             scope.panel.lastColor = object.series.color;
           }
         });
+
 
         var $tooltip = $('<div>');
         elem.bind("plothover", function (event, pos, item) {
