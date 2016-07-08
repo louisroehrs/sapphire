@@ -1,5 +1,5 @@
 {
-  "title": "Basic Dashboard With Pointers",
+  "title": "Bike Trips",
   "services": {
     "query": {
       "idQueue": [
@@ -29,9 +29,9 @@
       ],
       "list": {
         "0": {
-          "from": "2014-04-02T05:07:22.216Z",
-          "to": "2014-04-02T05:22:22.216Z",
-          "field": "event_timestamp",
+          "from": "2014-01-01T00:00:00.000Z",
+          "to": "2016-04-02T05:22:22.216Z",
+          "field": "Start Date",
           "type": "time",
           "mandate": "must",
           "active": true,
@@ -49,7 +49,7 @@
       "title": "Overview",
       "height": "50px",
       "editable": true,
-      "collapse": false,
+      "collapse": true,
       "collapsable": true,
       "panels": [
         {
@@ -108,10 +108,11 @@
             "30d",
             "90d",
             "1y",
+            "3y",
             "5y"
           ],
-          "timespan": "15m",
-          "timefield": "event_timestamp",
+          "timespan": "3y",
+          "timefield": "Start_Date_dt",
           "timeformat": "",
           "refresh": {
             "enable": false,
@@ -165,7 +166,7 @@
       "title": "Facets, Histogram and Table",
       "height": "150px",
       "editable": true,
-      "collapse": false,
+      "collapse": true,
       "collapsable": true,
       "panels": [
         {
@@ -178,7 +179,7 @@
           "type": "text",
           "status": "Stable",
           "mode": "markdown",
-          "content": "Without knowing about your data, I cannot fully configure the panels I have provided below. However, I have provided you with some starting points, assuming that your time field is \"event_timestamp\" and that there is a field called \"message\" that you wish to facet on in order to view the top terms that appear in the \"message\" field and their frequency. If there is no data, these panels will be empty, and may give an error.\n\nThe _histogram_ panel allows you to plot either _counts_ or a specific field's (integer) _values_ across time. If you go to  _Configure_, the panel allows you to set the type of chart and what variable is plotted (if choosing the _values_ option). Moreover, when plotting values, you can specify a _group by_ field which will produce multiple charts. You can modify the time window for the entire page from within the histogram panel.\n\nThe _terms_ panel is great for visualizing facets--as pie charts, bar charts or tables. Clicking on a term will create a global filter query restricting the result set (across all panels within the page) to the field value that is selected. You could have many such panels depending on the number of fields you choose to facet on.\n\nThe *table* panel at the bottom provides you a detailed view of search results. It has attempted to list your fields to the left; select a few to view them in the table. You can sort by any field. Click on a particular row to expand the resulting document that was returned.",
+          "content": "Without knowing about your data, I cannot fully configure the panels I have provided below. However, I have provided you with some starting points, assuming that your time field is \"Start_Date_dt\" and that there is a field called \"message\" that you wish to facet on in order to view the top terms that appear in the \"message\" field and their frequency. If there is no data, these panels will be empty, and may give an error.\n\nThe _histogram_ panel allows you to plot either _counts_ or a specific field's (integer) _values_ across time. If you go to  _Configure_, the panel allows you to set the type of chart and what variable is plotted (if choosing the _values_ option). Moreover, when plotting values, you can specify a _group by_ field which will produce multiple charts. You can modify the time window for the entire page from within the histogram panel.\n\nThe _terms_ panel is great for visualizing facets--as pie charts, bar charts or tables. Clicking on a term will create a global filter query restricting the result set (across all panels within the page) to the field value that is selected. You could have many such panels depending on the number of fields you choose to facet on.\n\nThe *table* panel at the bottom provides you a detailed view of search results. It has attempted to list your fields to the left; select a few to view them in the table. You can sort by any field. Click on a particular row to expand the resulting document that was returned.",
           "style": {},
           "title": "Facets, Histogram and Table"
         }
@@ -210,7 +211,7 @@
           "group_field": null,
           "auto_int": true,
           "resolution": 100,
-          "interval": "10s",
+          "interval": "1d",
           "intervals": [
             "auto",
             "1s",
@@ -260,9 +261,9 @@
             "ids": [
               0
             ],
-            "query": "q=*&wt=json&rows=0&fq=event_timestamp:[2014-04-02T05:07:22.000Z%20TO%202014-04-02T05:22:22.000Z]&facet=true&facet.field=message&facet.range=event_timestamp&facet.range.start=2014-04-02T05:07:22.000Z&facet.range.end=2014-04-02T05:22:22.000Z&facet.range.gap=%2B1DAY&facet.limit=100"
+            "query": "q=*&wt=json&rows=0&fq=Start_Date_dt:[2014-04-02T05:07:22.000Z%20TO%202014-04-02T05:22:22.000Z]&facet=true&facet.field=Start_Station_s&facet.range=Start_Date_dt&facet.range.start=2014-04-02T05:07:22.000Z&facet.range.end=2014-04-02T05:22:22.000Z&facet.range.gap=%2B1DAY&facet.limit=100"
           },
-          "field": "message",
+          "field": "Start_Station_s",
           "exclude": [],
           "missing": false,
           "other": false,
@@ -277,14 +278,14 @@
           "arrangement": "horizontal",
           "chart": "pie",
           "counter_pos": "none",
-          "title": "Message Terms",
+          "title": "Starting Station_ss",
           "spyable": true,
-          "time_field": "event_timestamp"
+          "time_field": "Start_Date_dt"
         }
       ]
     },
     {
-      "title": "Events",
+      "title": "Bike Trips",
       "height": "650px",
       "editable": true,
       "collapse": false,
@@ -310,7 +311,7 @@
           },
           "overflow": "min-height",
           "fields": [
-            "message"
+
           ],
           "highlight": [],
           "sortable": true,
@@ -322,14 +323,14 @@
             "ids": [
               0
             ],
-            "query": "q=*&wt=json&rows=500&fq=event_timestamp:[2014-04-02T05:07:22.000Z%20TO%202014-04-02T05:22:22.000Z]&sort=id desc"
+            "query": "q=*&wt=json&rows=500&fq=Start_Date_dt:[2014-04-02T05:07:22.000Z%20TO%202014-04-02T05:22:22.000Z]&sort=id desc"
           },
           "field_list": true,
           "status": "Stable",
           "trimFactor": 300,
           "normTimes": true,
-          "title": "Events",
-          "time_field": "event_timestamp"
+          "title": "Bike Trips",
+          "time_field": "Start_Date_dt"
         }
       ]
     }
@@ -359,7 +360,7 @@
   },
   "solr": {
     "server": "/solr/",
-    "core_name": "collection1",
+    "core_name": "biketrips2",
     "core_list": [],
     "global_params": ""
   }

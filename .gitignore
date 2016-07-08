@@ -1,9 +1,30 @@
-node_modules
-.aws-config.json
-dist
-bower_components
-npm-debug.log
-tmp/
-build.number
-build/
-*.iml
+# Emacs editor
+*.*~
+\#*.*#
+\.#*
+\#*#
+
+# Mac Finder
+.DS_Store
+.Thumbs_DB
+
+# Java build
+target
+
+#random stuff
+hacks
+*staples*.*
+
+#serverlogs
+log
+
+# IntelliJ
+.idea
+
+#UI
+/node_modules
+/.tmp
+/.sass-cache
+/bower_components
+/service/main/resources/root
+
