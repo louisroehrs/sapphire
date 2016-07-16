@@ -255,8 +255,15 @@ function (angular, app, _, $, kbn) {
         }
         // Sort the results
         $scope.data = _.sortBy($scope.data, function(d) {
-          return $scope.panel.sortBy === 'index' ? d.label : d.data[0][1];
+            if  ($scope.panel.sortBy ==='index') {
+                return d.label;
+            } else if ($scope.panel.sortBy ==='indexnumeric' ) {
+                return + d.label;
+            } else {
+                return d.data[0][1];
+            }
         });
+
         if ($scope.panel.order === 'descending') {
           $scope.data.reverse();
         }

@@ -38,6 +38,9 @@ define([
                 query: '*:*',
                 custom: ''
             },
+            filters: {
+                ids: []
+            },
             facet_limit: 1000, // maximum number of rows returned from Solr
             spyable: true,
             show_queries: true,
@@ -60,6 +63,34 @@ define([
                 out.children.push($scope.parse_item(data[ob]));
             }
             return out;
+        };
+
+
+        $scope.reset_query = function (state) {
+
+            var ids=  $scope.filters.ids;
+            if (ids.length > 0) {
+                filterSrv.remove(ids[0]);
+            }
+            $scope.filters.ids=[];
+            dashboard.refresh();
+        };
+
+        $scope.set_filters = function (d) {
+            if (DEBUG) {
+                console.log("Setting Filters to " + d);
+            }
+            for (var i = 0; i < d.length; i++) {
+                $scope.filters.ids.push(filterSrv.set({
+                    type: 'terms',
+                    field: $scope.panel.facet_pivot_strings[i].replace(/ /g, ''),
+                    mandate: 'must',
+                    value: d[i]
+                }));
+                console.log($scope.panel.facet_pivot_strings[i].replace(/ /g, '') + ' - ' + d[i]);
+            }
+
+            dashboard.refresh();
         };
 
         $scope.parse_item = function (doc) {
