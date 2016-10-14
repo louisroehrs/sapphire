@@ -191,3 +191,7 @@
   opacity: 0.2;
 }
 
+.notall {
+    font-weight:bold;
+    color:blue;
+}

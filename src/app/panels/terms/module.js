@@ -72,6 +72,7 @@ function (angular, app, _, $, kbn) {
       spyable     : true,
       show_queries:true,
       error : '',
+      filtered : false,
       chartColors : querySrv.colors
     };
     _.defaults($scope.panel,_d);
@@ -296,13 +297,20 @@ function (angular, app, _, $, kbn) {
       if(_.isUndefined(term.meta)) {
         filterSrv.set({type:'terms',field:$scope.panel.field,value:term.label,
           mandate:(negate ? 'mustNot':'must')});
+          $scope.panel.filtered= true;
       } else if(term.meta === 'missing') {
         filterSrv.set({type:'exists',field:$scope.panel.field,
           mandate:(negate ? 'must':'mustNot')});
+          $scope.panel.filtered= true;
       } else {
         return;
       }
       dashboard.refresh();
+    };
+
+    $scope.not_all = function (state) {
+        return  filterSrv.idsByTypeAndField('terms',$scope.panel.field).length > 0 && 
+            filterSrv.idsByTypeAndField('exists',$scope.panel.field).length >0;
     };
 
     $scope.reset_query = function (state) {
@@ -314,6 +322,7 @@ function (angular, app, _, $, kbn) {
         if (ids.length > 0) {
             filterSrv.remove(ids[0]);
         }
+        $scope.panel.filtered= false;
         dashboard.refresh();
     };
 

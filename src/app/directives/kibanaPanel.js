@@ -72,11 +72,11 @@ function (angular) {
 //              'ng-class="dropdown.icon" class="pointer"></i></a></span>'+
 //          '</span>' +
 
-          '<span class="row-button extra" ng-show="panelMeta.loading == true">' +
-            '<span>'+
-              '<i class="icon-spinner smaller icon-spin icon-large"></i>' +
-            '</span>'+
-          '</span>' +
+//          '<span class="row-button extra" ng-show="panelMeta.loading == true">' +
+//           '<span>'+
+//              '<i class="icon-spinner smaller icon-spin icon-large"></i>' +
+//            '</span>'+
+//          '</span>' +
 
           '<span class="row-button row-text panel-title" ng-show="panel.title">' +
             '{{panel.title}}' +

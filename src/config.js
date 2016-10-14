@@ -31,7 +31,7 @@ function (Settings) {
      * your banana web application.
      * @type {String}
      */
-    solr: "/solr/",
+      solr: "/solr/",
     solr_core: "logstash_logs",
 
 //    timefield: 'event_timestamp',
