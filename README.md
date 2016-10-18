@@ -16,9 +16,9 @@ Pull the repo from the `release` branch for production deployment; version x.y.z
 
 `develop` branch is used for active development and cutting edge features.
 
-## Sapphire 1.0.0
+## Sapphire 2.0.0
 
-Sapphire 1.0.0 contains many new features, new panels, enhancements and bug fixes to improve the overall user experience
+Sapphire 2.0.0 contains many new features, new panels, enhancements and bug fixes to improve the overall user experience
 and stability. Thank you to our growing community for your suggestions and contributions! Please continue sending us
 your feedback, so that we can further extend and improve Banana!
 
