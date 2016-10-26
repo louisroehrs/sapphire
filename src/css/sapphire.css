@@ -54,7 +54,9 @@ div.row-close.span12:hover {
     border: 0px;
 }
 
-
+.small {
+    font-size:100%
+}
 /* All button 
 
 background-color: lightblue;
