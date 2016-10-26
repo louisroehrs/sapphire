@@ -1,0 +1,67 @@
+.panelCont {
+    background-color: #021f46;
+    border: 3px solid rgba(208,228,255,0.2);
+    border-radius: 3px;
+    outline : 0px;
+}
+
+BODY {
+    background-color: #012243;
+    -webkit-transform: translate3d(0, 0, 0);
+    /* more specific animation properties here */
+
+}
+.row-close {
+    background-color: rgba(0,0,0,0);
+    border-width: 0px;
+}
+
+.panel div.panel-extra .extra {
+    border-width:0px;
+    opacity: 0.2;
+}
+
+.panel div.panel-extra .extra:hover {
+    border-width:0px;
+    opacity: 1;
+}
+
+.row-button {
+    border-width:0px;
+}
+
+div.row-open {
+    opacity: 0.2;
+}
+div.row-open:hover {
+    opacity: 1;
+}
+
+div.row-close.span12 {
+    opacity: 0.2;
+}
+
+div.row-close.span12:hover {
+    opacity: 1;
+}
+
+.table-striped tbody>tr:nth-child(odd)>td {
+    background-color: rgba(255, 247, 247, 0.06);
+    border: 0px;
+    outline:none;
+}
+.table-striped tbody>tr:nth-child(even)>td {
+    border: 0px;
+}
+
+
+/* All button 
+
+background-color: lightblue;
+padding: 1px 6px 1px 6px;
+border-radius: 4px;
+color:black;
+
+float: right
+
+*/
