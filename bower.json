@@ -1,7 +1,7 @@
 {
-  "name": "Banana",
-  "description": "Banana for Solr Data Visualization",
-  "homepage": "https://github.com/LucidWorks/banana/wiki",
+  "name": "Sapphire",
+  "description": "Sapphire for Solr Data Visualization",
+  "homepage": "https://w3-connections.ibm.com/communities/service/html/communitystart?communityUuid=c73b589a-bb57-4934-88ac-01269900b6a1",
   "license": "Apache License",
   "dependencies": {
     "angular": "1.0.8",

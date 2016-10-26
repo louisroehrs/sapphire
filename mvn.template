@@ -22,7 +22,7 @@
     <artifactId>${ivy.pom.artifactId}</artifactId>
     <packaging>${ivy.pom.packaging}</packaging>
     <version>${version}</version>
-    <name>Banana Project</name>
+    <name>Sapphire Project</name>
     <description>${ivy.pom.description}</description>
     <url>${ivy.pom.url}</url>
     <licenses>

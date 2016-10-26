@@ -1,13 +1,13 @@
 {
   "version": "1.6.0",
-  "name": "banana",
-  "description": "Banana for Solr - A Port of Kibana",
-  "repository": "https://github.com/LucidWorks/banana",
-  "homepage": "https://github.com/LucidWorks/banana/wiki",
-  "license": "Apache License",
+  "name": "sapphire",
+  "description": "Sapphire for Solr - A Port of Kibana/Banana",
+  "repository": "https://gitlabhost.rtp.raleigh.ibm.com/1G4709897/sapphire",
+  "homepage": "https://w3-connections.ibm.com/communities/service/html/communitystart?communityUuid=c73b589a-bb57-4934-88ac-01269900b6a1&ftHelpTip=true",
+  "license": "TBD",
   "author": {
-    "name": "Andrew Thanalertvisuti",
-    "company": "Lucidworks, Inc."
+    "name": "Louis Roehrs",
+    "company": "IBM Corp."
   },
   "devDependencies": {
     "bower": "^1.3.1",

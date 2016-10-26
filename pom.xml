@@ -24,25 +24,25 @@ limitations under the License.
         <version>7</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.lucidworks</groupId>
-    <artifactId>banana</artifactId>
+    <groupId>com.ibm.watson.commerce</groupId>
+    <artifactId>sapphire</artifactId>
     <packaging>war</packaging>
-    <version>1.6.0</version>
-    <description>The Banana project was forked from Kibana, and works with all kinds of time series (and non-time series) data stored in Apache Solr.
+    <version>2.0.0</version>
+    <description>The Sapphire project was forked from Banana which was forked from Kibana, and works with all kinds of time series (and non-time series) data stored in Apache Solr.
     </description>
-    <url>https://github.com/LucidWorks/banana</url>
-    <name>Banana Project</name>
+    <url>https://w3-connections.ibm.com/communities/service/html/communitystart?communityUuid=c73b589a-bb57-4934-88ac-01269900b6a1&ftHelpTip=true</url>
+    <name>Sapphire Project</name>
     <licenses>
         <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <name>TBD</name>
+            <url>http://www.ibm.com</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/LucidWorks/banana</url>
-        <connection>scm:git:git://github.com/LucidWorks/banana.git</connection>
-        <developerConnection>scm:git:git@github.com/LucidWorks/banana.git</developerConnection>
+        <url>https://gitlabhost.rtp.raleigh.ibm.com/1G4709897/sapphire</url>
+        <connection>scm:git:git@gitlabhost.rtp.raleigh.ibm.com:1G4709897/sapphire.git</connection>
+        <developerConnection>scm:git:git@gitlabhost.rtp.raleigh.ibm.com:1G4709897/sapphire.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <distributionManagement>
@@ -58,10 +58,10 @@ limitations under the License.
     </issueManagement>
     <developers>
         <developer>
-            <name>Andrew Thanalertvisuti</name>
-            <email>andrew.thana@gmail.com</email>
-            <organization>Lucidworks</organization>
-            <organizationUrl>https://lucidworks.com/</organizationUrl>
+            <name>Louis Roehrs</name>
+            <email>lroehrs@us.ibm.com</email>
+            <organization>IBM</organization>
+            <organizationUrl>https://www.ibm.com/</organizationUrl>
         </developer>
     </developers>
     <build>

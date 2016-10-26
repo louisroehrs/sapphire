@@ -1,3 +1,4 @@
+Portions Copyright 2016 IBM Corp.
 Portions Copyright 2013-2014 LucidWorks, Inc.  
 Copyright 2012-2013 Elasticsearch BV
 
