@@ -110,7 +110,8 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
           self.dash_load(dashboard);
         // No? Ok, grab default.json, its all we have now
         } else {
-          self.file_load('default.json');
+//          self.file_load('default.json');
+          self.file_load('searchcorpus2.json');
         }
       }
     };
@@ -119,7 +120,7 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
     // here before telling the panels to refresh
     this.refresh = function() {
       // Retrieve Solr collections for the dashboard
-      kbnIndex.collections(self.current.solr.server).then(function (p) {
+/*      kbnIndex.collections(self.current.solr.server).then(function (p) {
         if (DEBUG) { console.debug('dashboard: kbnIndex.collections p = ',p); }
         if (p.length > 0) {
           self.current.solr.core_list = p;
@@ -131,6 +132,8 @@ function (angular, $, kbn, _, config, moment, Modernizr) {
           }
         }
       });
+*/
+        self.current.solr.core_list = ["internetdj.com"];
 
       if(self.current.index.interval !== 'none') {
         if(filterSrv.idsByType('time').length > 0) {

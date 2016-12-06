@@ -20,7 +20,7 @@
   <property file="${basedir}/default.properties" />
 
   <!-- define Maven coordinates, repository url and artifacts name etc -->
-  <property name="groupId" value="com.lucidworks" />
+  <property name="groupId" value="com.ibm.sapphire" />
   <property name="artifactId" value="${final.name}" />
   <property name="maven-repository-url"
     value="https://oss.sonatype.org/service/local/staging/deploy/maven2" />
