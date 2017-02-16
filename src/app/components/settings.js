@@ -15,7 +15,7 @@ function (_) {
       timefield: 'event_timestamp',
       banana_index  : 'banana-int',
       USE_ADMIN_LUKE: true,
-      USE_ADMIN_CORES: true,
+      USE_ADMIN_CORES: false,
       panel_names   : [],
     };
 

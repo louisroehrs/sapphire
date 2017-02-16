@@ -1,12 +1,15 @@
 /**
  * main app level module
  */
+
+
+
 define([
   'angular',
   'jquery',
   'underscore',
   'require',
-
+  'settings',
   'elasticjs',
   'solrjs',
   'bootstrap',

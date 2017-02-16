@@ -31,7 +31,7 @@ function (Settings) {
      * your banana web application.
      * @type {String}
      */
-      solr: "/solr/",
+      solr: "/solr/",  // this doesn't config anything.
     solr_core: "logstash_logs",
 
 //    timefield: 'event_timestamp',
@@ -68,7 +68,7 @@ function (Settings) {
      * @type {Boolean}
      */
     USE_ADMIN_LUKE: true,
-    USE_ADMIN_CORES: true,
+    USE_ADMIN_CORES: false, /// for watson... since they disabled it.
 
     /**
      * Panel modules available. Panels will only be loaded when they are defined in the

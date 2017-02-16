@@ -39,6 +39,7 @@ function (angular, _) {
         var request = $http({
           method: 'GET',
           url: dashboard.current.solr.server + dashboard.current.solr.core_name + query,
+
         }).error(function(data, status) {
           if(status === 0) {
             alertSrv.set('Error', 'Could not contact Solr at '+dashboard.current.solr.server+

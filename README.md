@@ -27,7 +27,7 @@ This release includes the following key new features and improvements:
 1.  'All' button that lets you drill back up and see all categories in a TERMS panel.
 2.  
 
-## Banana Release Notes
+## Sapphire Release Notes
 
 You can find all previous [Release Notes](https://github.com/LucidWorks/banana/wiki/Release-Notes) on our wiki page.
 
