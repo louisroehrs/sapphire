@@ -3,14 +3,16 @@
     border: 3px solid rgba(208,228,255,0.2);
     border-radius: 3px;
     outline : 0px;
+    min-height:260px; // for some consistency. 
 }
 
 BODY {
     background-color: #012243;
     -webkit-transform: translate3d(0, 0, 0);
+    font-family: Helvetica Neue, Arial, Verdana, helvetica;
     /* more specific animation properties here */
-
 }
+
 .row-close {
     background-color: rgba(0,0,0,0);
     border-width: 0px;
@@ -28,6 +30,8 @@ BODY {
 
 .row-button {
     border-width:0px;
+    padding-left: 0px;
+    padding-right: 6px;
 }
 
 div.row-open {
@@ -57,6 +61,76 @@ div.row-close.span12:hover {
 .small {
     font-size:100%
 }
+
+.brand.ng-binding {
+    font-weight: bold;
+}
+
+.big {
+   font-size:180%;
+}
+
+span.row-button.row-text.panel-title.ng-binding {
+    padding-left: 8px;
+}
+
+
+@media screen and (min-width:1200px) {
+.row-fluid [class*="span"] {
+    margin-left: 1%;
+    width:100%;
+}
+
+.row-fluid .span1 {
+    width: 7.41666666667%;
+}
+
+.row-fluid .span2 {
+    width: 15.8333333333%;
+}
+
+.row-fluid .span3 {
+    width: 24.25%
+}
+
+.row-fluid .span4 {
+    width: 32.666666666666%;
+}
+
+.row-fluid .span5 {
+    width: 41.666666666666%;
+}
+
+.row-fluid .span6 {
+    width: 49.5%;
+}
+
+.row-fluid .span7 {
+    width: 57.916666666666%;
+}
+
+.row-fluid .span8 {
+    width: 66.333333333333%;
+}
+
+.row-fluid .span9 {
+    width: 74.75%;
+}
+
+.row-fluid .span10 {
+    width: 83.16666666666%;
+}
+
+.row-fluid .span11 {
+    width: 91.58333333333%;
+}
+
+.row-fluid .span12 {
+    width: 100%;
+}
+
+}
+
 /* All button 
 
 background-color: lightblue;

@@ -23,10 +23,10 @@ function (angular) {
               'index:{{$index}},'+
               'onStart:\'panelMoveStart\','+
               'onStop:\'panelMoveStop\''+
-              '}"  ng-model="row.panels">{{panel.type}}</span>'+
+              '}"  ng-model="row.panels"><span class="big">❖</span></span>'+  //{{panel.type}}
           '</span>' +
           '<span class="extra row-button" ng-show="panel.draggable == false">' +
-            '<span class="row-text">{{panel.type}}</span>'+
+            '<span class="row-text"><span class="big">❖</span></span>'+ //{{panel.type}}
           '</span>' +
 
           '<span class="extra row-button" ng-show="panel.editable != false">' +
