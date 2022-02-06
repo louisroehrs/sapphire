@@ -38,6 +38,9 @@
       overflow:overlay; 
       padding-right:10px 
     }
+    .terms-all-button {
+      float:left;
+    }
     </style>
   <!-- START Pie or bar chart -->
   <div ng-show="panel.counter_pos == 'above' && (panel.chart == 'bar' || panel.chart == 'pie')" id='{{$id}}-legend'>
@@ -68,7 +71,7 @@
       </tr>
     </table>
   </div>
-  <div terms-all-button ng-show="panel.filtered"  ng-click="reset_query()">All</div>
+  <div  terms-all-button ng-show="panel.filtered"  ng-click="reset_query()" style="float:right">Reset to All</div>
   <div style="overflow:hidden" ng-show="panel.chart == 'pie' || panel.chart == 'bar'" terms-chart params="{{panel}}" style="position:relative" class="pointer" ng-style="{'floatleft':panel.counter_pos == 'right'}"></div>
 
   <div ng-show="panel.counter_pos == 'below' && (panel.chart == 'bar' || panel.chart == 'pie')" id='{{$id}}-legend' ng-class="{below:panel.counter_pos == 'below'}">

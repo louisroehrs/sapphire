@@ -1,0 +1,183 @@
+BODY {
+    background-color: #eee;
+    -webkit-transform: translate3d(0, 0, 0);
+    color:#333;
+    text-shadow:none;
+    /* more specific animation properties here */
+}
+
+.panelCont {
+    background-color: #fafafa;
+    border: 1px solid rgba(20,22,25,0.1); */
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #ccc;
+    min-height:260px; // for some consistency. 
+}
+
+
+
+.row-close {
+    background-color: rgba(0,0,0,0);
+    border-width: 0px;
+}
+
+.panel div.panel-extra .extra {
+    border-width:0px;
+    opacity: 0.2;
+}
+
+.panel div.panel-extra .extra:hover {
+    border-width:0px;
+    opacity: 1;
+}
+
+.row-button {
+    border-width:0px;
+    padding-left: 0px;
+    padding-right: 6px;
+}
+
+div.row-open {
+    opacity: 0.2;
+}
+div.row-open:hover {
+    opacity: 1;
+}
+
+div.row-close.span12 {
+    opacity: 0.2;
+}
+
+div.row-close.span12:hover {
+    opacity: 1;
+}
+
+.table {
+    background-color: #fff;
+}
+
+.table-hover tbody tr:hover>td, .table-hover tbody tr:hover>th {
+   background-color:#88f;
+}
+
+
+tbody.ng-scope.odd {
+    background-color:#ddd;
+}
+
+
+table.table.table-bordered.table-condensed.ng-scope {
+ color:white;
+}
+
+.small {
+    font-size:100%
+}
+
+.brand.ng-binding {
+    font-weight: bold;
+    text-shadow: none;
+}
+
+
+.big {
+   font-size:180%;
+}
+
+span.row-button.row-text.panel-title.ng-binding {
+    padding-left: 8px;
+}
+
+
+input.search-query.panel-query.ng-pristine.ng-valid.input-block-level.last-query {
+   background-color:#fff;
+   color:#333;
+}                                                                                
+
+
+div.container-fluid {
+   background-color: #eee;
+}
+
+span.brand.ng-binding {
+   color:#000
+}
+
+
+span.row-button.row-text.panel-title.ng-binding {
+   font-size: 1.2em;
+}
+
+
+/* svg */
+
+text.mono {
+   color:#222;
+}
+
+@media screen and (min-width:1200px) {
+.row-fluid [class*="span"] {
+    margin-left: 1%;
+    width:100%;
+}
+
+.row-fluid .span1 {
+    width: 7.41666666667%;
+}
+
+.row-fluid .span2 {
+    width: 15.8333333333%;
+}
+
+.row-fluid .span3 {
+    width: 24.25%
+}
+
+.row-fluid .span4 {
+    width: 32.666666666666%;
+}
+
+.row-fluid .span5 {
+    width: 41.666666666666%;
+}
+
+.row-fluid .span6 {
+    width: 49.5%;
+}
+
+.row-fluid .span7 {
+    width: 57.916666666666%;
+}
+
+.row-fluid .span8 {
+    width: 66.333333333333%;
+}
+
+.row-fluid .span9 {
+    width: 74.75%;
+}
+
+.row-fluid .span10 {
+    width: 83.16666666666%;
+}
+
+.row-fluid .span11 {
+    width: 91.58333333333%;
+}
+
+.row-fluid .span12 {
+    width: 100%;
+}
+
+}
+
+/* All button 
+
+background-color: lightblue;
+padding: 1px 6px 1px 6px;
+border-radius: 4px;
+color:black;
+
+float: right
+
+*/
